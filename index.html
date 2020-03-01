@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pong</title>
+		<link rel="stylesheet" type="text/css" href="index.css">		
+	</head>
+	<body>
+		<div id="game-container">
+			<canvas id="pong" width="900" height="500"></canvas>
+			<script src="config.js"></script>
+			<script src="ui.js"></script>
+			<script src="rectangle.js"></script>
+			<script src="ball.js"></script>
+			<script src="player.js"></script>
+			<script src="pong.js"></script>
+			<div id="control-panel">
+			<table id="variables" border="2px solid">
+			  <tr>
+				<td>
+					<label for="pColor">Player color: </label>
+					<input type="color" id="pColor" class="selector" value="#8a0833" onchange="Controlpanel.changePColor()">
+				</td>
+				<td>
+					<label for="ballColor">Ball color: </label>
+					<input type="color" id="ballColor" class="selector" value="#2666a3" onchange="Controlpanel.changeBallColor()">
+				</td>
+				<td>
+					<label for="canvasColor">Background color: </label>
+					<input type="color" id="canvasColor" class="selector" value="#000000" onchange="Controlpanel.changeCanvasColor()">
+				</td>
+				<td>
+					<label for="borderColor">Border color: </label>
+					<input type="color" id="borderColor" class="selector" value="#22038a" onchange="Controlpanel.changeBorderColor()">
+				</td>
+			  </tr>
+			  <tr>
+				<td>
+					<label for="scoreTextColor">Score color: </label>
+					<input type="color" id="scoreTextColor" class="selector" value="#7c66c4" onchange="Controlpanel.changeScoreColor()">
+				</td>
+				<td>
+					<label for="startTextColor">Start prompt color: </label>
+					<input type="color" id="startTextColor" class="selector" value="#15bf9a" onchange="Controlpanel.changeStartTextColor()">
+				</td>
+				<td>
+					<label for="hitSound">Hit sound:</label>
+					<select id="hitSound" class="selector" onchange="Controlpanel.changeSoundSource()">
+					  <option value="hit_sound.mp3">Sound 1</option>
+					  <option value="hit_sound2.mp3">Sound 2</option>
+					</select>
+				</td>
+				<td>
+					<label for="borderStyle">Border style: </label>
+					<select id="borderStyle" class="selector" onchange="Controlpanel.changeBorderStyle()">
+					  <option value="dashed">Dashed</option>
+					  <option value="double">Double</option>
+					  <option value="dotted">Dotted</option>
+					  <option value="solid">Solid</option>
+					</select>
+				</td>
+			  </tr>
+			</table>
+				<script src="controlpanel.js"></script>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
