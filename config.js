@@ -1,36 +1,43 @@
 //config.js
 /*********DEFINE GLOBAL CONSTANTS AND VARIABLES*********/
-const canvas = document.getElementById("pong");
-const ctx = canvas.getContext("2d");
 
-//player
-const pWidth = 15;
-const pHeight = 140;
-const p1PosX = 40;
-const p2PosX = canvas.width - pWidth - p1PosX;
-const p1UpCode = 87;
-const p1DownCode = 83;
-const p2UpCode = 38;
-const p2DownCode = 40;
-const pStartPosY = canvas.height / 2 - pHeight / 2;
-let pColor = "#8a0833";
-const aiSpeed = 3.2;
-const pSpeed = 3.5;
-const maxVelY = 7;
+class Config {
+	constructor() {
+		this.canvas = document.getElementById("pong");
+		this.ctx = this.canvas.getContext("2d");
+		//player
+		this.PLAYER_WIDTH = 15;
+		this.PLAYER_HEIGHT = 140;
+		this.PLAYER_1_POS_X = 40;
+		this.PLAYER_2_POS_X = this.canvas.width - this.PLAYER_WIDTH - this.PLAYER_1_POS_X;
+		this.PLAYER_1_UP_KEY_CODE = 87;
+		this.PLAYER_1_DOWN_KEY_CODE = 83;
+		this.PLAYER_2_UP_KEY_CODE = 38;
+		this.PLAYER_2_DOWN_KEY_CODE = 40;
+		this.PLAYER_START_POS_Y = this.canvas.height / 2 - this.PLAYER_HEIGHT / 2;
+		this.PLAYER_COLOR = "#8a0833";
+		this.AI_PLAYER_SPEED = 3.2;
+		this.HUMAN_PLAYER_SPEED = 3.5;
+		this.MAX_PLAYER_VEL = 7.5;
+		this.FRICTION_MULTIPLIER = 0.99;
 
-//ball
-const sideLength = 14;
-const ballVelX = 3;
-const ballPosX = canvas.width / 2 - sideLength / 2;
-const ballPosY = canvas.height / 2 - sideLength / 2;
-let ballColor = "#2666a3"
-const bVelXMultiplier = 1.05;
+		//ball
+		this.BALL_SIZE = 14;
+		this.BALL_START_VEL_X = 3;
+		this.BALL_POS_X = this.canvas.width / 2 - this.BALL_SIZE / 2;
+		this.BALL_POS_Y = this.canvas.height / 2 - this.BALL_SIZE / 2;
+		this.BALL_COLOR = "#2666a3"
+		this.BALL_VEL_X_MULTIPLIER = 1.05;
 
-//UI
-let scoreTextColor = "#7c66c4";
-const scoreTextFont = "30px Impact";
-const scoreTextPosY = 50;
-let startTextColor = "#15bf9a";
-const startTextFont = "40px Jokerman";
-const startTextPosX = canvas.width / 5;
-const startTextPosY = canvas.height / 3;
+		//UI
+		this.SCORE_TEXT_COLOR = "#7c66c4";
+		this.SCORE_TEXT_FONT = "30px Impact";
+		this.SCORE_TEXT_POS_Y = 50;
+		this.START_PROMPT_COLOR = "#15bf9a";
+		this.START_PROMPT_FONT = "40px Jokerman";
+		this.START_PROMPT_POS_X = this.canvas.width / 5;
+		this.START_PROMPT_POS_Y = this.canvas.height / 3;
+		}
+	}
+	let cfg = new Config();
+	export default cfg;

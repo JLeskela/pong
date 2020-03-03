@@ -1,5 +1,8 @@
 //rectangle.js
-class Rectangle {
+import cfg from './config.js'
+import Pong from './pong.js'
+
+export default class Rectangle {
 	constructor(x, y, w, h, color) {
 		this.x = x;
 		this.y = y;
@@ -26,7 +29,7 @@ class Rectangle {
 	}
 	
 	draw(color) {
-		ctx.fillStyle = color;
-		ctx.fillRect(this.x, this.y, this.w, this.h);
+		cfg.ctx.fillStyle = color;
+		cfg.ctx.fillRect(this.x, this.y, this.w, this.h);
 	} 
 }
