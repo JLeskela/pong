@@ -116,12 +116,13 @@ export default class Pong {
 	}
 	/*************************CONTROLS***********************/
 	controls(p) {
-		if (p.keys.up && p.vely >= -cfg.MAX_PLAYER_VEL && p.top > -cfg.PLAYER_HEIGHT / 2) {
+		if (p.keys.up && p.vely >= -cfg.MAX_PLAYER_VEL && 
+		    p.top > -cfg.PLAYER_HEIGHT / 2) {
 			p.vely -= cfg.HUMAN_PLAYER_SPEED;
 			p.keys.up = false;
 		}
 		if (p.keys.down && p.vely <= cfg.MAX_PLAYER_VEL && 
-			p.top < cfg.canvas.height - cfg.PLAYER_HEIGHT)
+			p.top < cfg.canvas.height - cfg.PLAYER_HEIGHT / 2)
 		{
 			p.vely += cfg.HUMAN_PLAYER_SPEED;
 			p.keys.down = false;
