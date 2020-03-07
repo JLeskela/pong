@@ -14,8 +14,12 @@ https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoe
 ## http-server
 https://www.npmjs.com/package/http-server
 
-In pong folder, run command
+In pong folder, run commands
+```
+npm install http-server -g
+```
 ```
 http-server
 ```
+
 
