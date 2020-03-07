@@ -15,5 +15,7 @@ https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoe
 https://www.npmjs.com/package/http-server
 
 In pong folder, run command
-    http-server
-on commandline. 
+```
+http-server
+```
+
