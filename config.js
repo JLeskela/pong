@@ -15,26 +15,29 @@ class Config {
 		this.PLAYER_2_UP_KEY_CODE = 38;
 		this.PLAYER_2_DOWN_KEY_CODE = 40;
 		this.PLAYER_START_POS_Y = this.canvas.height / 2 - this.PLAYER_HEIGHT / 2;
-		this.PLAYER_COLOR = "#8a0833";
-		this.AI_PLAYER_SPEED = 3.2;
+		this.PLAYER_COLOR = "#800000";
+		this.AI_PLAYER_SPEED = 4.2;
 		this.HUMAN_PLAYER_SPEED = 3.5;
 		this.MAX_PLAYER_VEL = 7.5;
-		this.FRICTION_MULTIPLIER = 0.99;
+		this.FRICTION_MULTIPLIER = 0.97;
 
 		//ball
 		this.BALL_SIZE = 14;
 		this.BALL_START_VEL_X = 3;
 		this.BALL_POS_X = this.canvas.width / 2 - this.BALL_SIZE / 2;
 		this.BALL_POS_Y = this.canvas.height / 2 - this.BALL_SIZE / 2;
-		this.BALL_COLOR = "#2666a3"
+		this.BALL_COLOR = "#008040";
 		this.BALL_VEL_X_MULTIPLIER = 1.05;
 
 		//UI
-		this.SCORE_TEXT_COLOR = "#7c66c4";
-		this.SCORE_TEXT_FONT = "30px Impact";
+		this.BACKGROUND_COLOR = "#151500";
+		this.BORDER_COLOR = "#ff8000";
+		this.BORDER_STYLE = "dashed";
+		this.SCORE_TEXT_COLOR = "#ffff00";
+		this.SCORE_TEXT_FONT = "30px Jokerman";
 		this.SCORE_TEXT_POS_Y = 50;
-		this.START_PROMPT_COLOR = "#15bf9a";
-		this.START_PROMPT_FONT = "40px Jokerman";
+		this.START_PROMPT_COLOR = "#ff0080";
+		this.START_PROMPT_FONT = "44px Algerian";
 		this.START_PROMPT_POS_X = this.canvas.width / 5;
 		this.START_PROMPT_POS_Y = this.canvas.height / 3;
 		}

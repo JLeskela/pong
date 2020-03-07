@@ -6,36 +6,36 @@
 	</head>
 	<body>
 		<div id="game-container">
-			<canvas id="pong" width="900" height="500"></canvas>
+			<canvas id="pong" class="hidden" width="900" height="500"></canvas>
 			<script type="module" src="pong.js"></script>
-			<div id="control-panel">
+			<div id="control-panel" class="hidden">
 			<table id="variables" border="2px solid">
 			  <tr>
 				<td>
 					<label for="pColor">Player color: </label>
-					<input type="color" id="pColor" class="selector" value="#8a0833">
+					<input type="color" id="pColor" class="selector">
 				</td>
 				<td>
 					<label for="ballColor">Ball color: </label>
-					<input type="color" id="ballColor" class="selector" value="#2666a3">
+					<input type="color" id="ballColor" class="selector">
 				</td>
 				<td>
 					<label for="canvasColor">Background color: </label>
-					<input type="color" id="canvasColor" class="selector" value="#000000">
+					<input type="color" id="canvasColor" class="selector">
 				</td>
 				<td>
 					<label for="borderColor">Border color: </label>
-					<input type="color" id="borderColor" class="selector" value="#22038a">
+					<input type="color" id="borderColor" class="selector">
 				</td>
 			  </tr>
 			  <tr>
 				<td>
 					<label for="scoreTextColor">Score color: </label>
-					<input type="color" id="scoreTextColor" class="selector" value="#7c66c4">
+					<input type="color" id="scoreTextColor" class="selector">
 				</td>
 				<td>
 					<label for="startTextColor">Start prompt color: </label>
-					<input type="color" id="startTextColor" class="selector" value="#15bf9a">
+					<input type="color" id="startTextColor" class="selector">
 				</td>
 				<td>
 					<label for="hitSound">Hit sound:</label>
@@ -50,6 +50,7 @@
 					  <option value="dashed">Dashed</option>
 					  <option value="double">Double</option>
 					  <option value="dotted">Dotted</option>
+					  <option value="groove">Groove</option>
 					  <option value="solid">Solid</option>
 					</select>
 				</td>

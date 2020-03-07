@@ -1,52 +1,65 @@
 //controlpanel.js
 import cfg from './config.js';
-import Pong from './pong.js';
 
-export const pColorPicker = document.getElementById("pColor");
-export const ballColorPicker = document.getElementById("ballColor");
-export const canvasColorPicker = document.getElementById("canvasColor");
-export const borderColorPicker = document.getElementById("borderColor");
-export const scoreTextColorPicker = document.getElementById("scoreTextColor");
-export const startTextColorPicker = document.getElementById("startTextColor");
-export const hitSoundSelector = document.getElementById("hitSound");
-export const ballVelXSelector = document.getElementById("ballVelX");
-export const aiSpeedSelector = document.getElementById("aiSpeed");
-export const borderStyleSelector = document.getElementById("borderStyle");
+const selectors = {
+	pColorPicker: document.getElementById("pColor"),
+	ballColorPicker: document.getElementById("ballColor"),
+	canvasColorPicker: document.getElementById("canvasColor"),
+	borderColorPicker: document.getElementById("borderColor"),
+	scoreTextColorPicker: document.getElementById("scoreTextColor"),
+	startTextColorPicker: document.getElementById("startTextColor"),
+	hitSoundSelector: document.getElementById("hitSound"),
+	borderStyleSelector: document.getElementById("borderStyle"),
+	controlPanel: document.getElementById("control-panel")
+};
 
 export default class Controlpanel {
+	static initialize() {
+		selectors.pColorPicker.value = cfg.PLAYER_COLOR;
+		selectors.ballColorPicker.value = cfg.BALL_COLOR;
+		selectors.canvasColorPicker.value = cfg.canvas.style.backgroundColor = cfg.BACKGROUND_COLOR;
+		selectors.borderColorPicker.value = cfg.canvas.style.borderColor = cfg.BORDER_COLOR;
+		selectors.scoreTextColorPicker.value = cfg.SCORE_TEXT_COLOR;
+		selectors.startTextColorPicker.value = cfg.START_PROMPT_COLOR;
+		selectors.borderStyleSelector.value = cfg.canvas.style.borderStyle = cfg.BORDER_STYLE;
+		cfg.canvas.style.borderLeft = cfg.canvas.style.borderRight = "none";
+		
+		cfg.canvas.style.display = selectors.controlPanel.style.display = "inherit";
+	}
+	
 	static addOnChangeListeners(pong) {
-		pColorPicker.addEventListener("change", (e) => {
-			cfg.PLAYER_COLOR = pColorPicker.value;
+		selectors.pColorPicker.addEventListener("change", (e) => {
+			cfg.PLAYER_COLOR = selectors.pColorPicker.value;
 			pong.draw();
 		});
 		
-		ballColorPicker.addEventListener("change", (e) => {
-			cfg.BALL_COLOR = ballColorPicker.value;
+		selectors.ballColorPicker.addEventListener("change", (e) => {
+			cfg.BALL_COLOR = selectors.ballColorPicker.value;
 			pong.draw();
 		});
 		
-		canvasColorPicker.addEventListener("change", (e) => {
-			cfg.canvas.style.backgroundColor = canvasColorPicker.value;
+		selectors.canvasColorPicker.addEventListener("change", (e) => {
+			cfg.canvas.style.backgroundColor = selectors.canvasColorPicker.value;
 		});
 		
-		borderColorPicker.addEventListener("change", (e) => {
-			cfg.canvas.style.borderColor = borderColorPicker.value;
+		selectors.borderColorPicker.addEventListener("change", (e) => {
+			cfg.canvas.style.borderColor = selectors.borderColorPicker.value;
 		});
 		
-		scoreTextColorPicker.addEventListener("change", (e) => {
-			cfg.SCORE_TEXT_COLOR = scoreTextColorPicker.value;
+		selectors.scoreTextColorPicker.addEventListener("change", (e) => {
+			cfg.SCORE_TEXT_COLOR = selectors.scoreTextColorPicker.value;
 			pong.draw();
 		});
-		startTextColorPicker.addEventListener("change", (e) => {
-			cfg.START_PROMPT_COLOR = startTextColorPicker.value;
+		selectors.startTextColorPicker.addEventListener("change", (e) => {
+			cfg.START_PROMPT_COLOR = selectors.startTextColorPicker.value;
 			pong.draw();
 		});
-		borderStyleSelector.addEventListener("change", (e) => {
-			cfg.canvas.style.borderStyle = borderStyleSelector.value;
+		selectors.borderStyleSelector.addEventListener("change", (e) => {
+			cfg.canvas.style.borderStyle = selectors.borderStyleSelector.value;
 			cfg.canvas.style.borderLeft = cfg.canvas.style.borderRight = "none";
 		});
-		hitSoundSelector.addEventListener("change", (e) => {
-			pong.hitSound = pong.wallSound = hitSoundSelector.value;
+		selectors.hitSoundSelector.addEventListener("change", (e) => {
+			pong.hitSound = pong.wallSound = selectors.hitSoundSelector.value;
 		});
 	}
 }

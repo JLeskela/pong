@@ -6,8 +6,8 @@ body {
 				margin: 0;
 			}
 			canvas {
-				background-color: #000;
-				border: dashed 5px #22038a;
+				background-color: #151500;
+				border: 10px;
 				border-left: none;
 				border-right: none;
 				height: 100%;
@@ -17,6 +17,9 @@ body {
 				background: rgb(34,193,195);
 				background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(229,45,253,1) 100%);
 				width: 900px;
+			}
+			.hidden {
+				display: none;
 			}
 			#game-container {
 				height: 100%;

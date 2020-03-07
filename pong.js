@@ -117,7 +117,7 @@ export default class Pong {
 	/*************************CONTROLS***********************/
 	controls(p) {
 		if (p.keys.up && p.vely >= -cfg.MAX_PLAYER_VEL && 
-		    p.top > -cfg.PLAYER_HEIGHT / 2) {
+		p.top > -cfg.PLAYER_HEIGHT / 2) {
 			p.vely -= cfg.HUMAN_PLAYER_SPEED;
 			p.keys.up = false;
 		}
@@ -141,6 +141,7 @@ export default class Pong {
 //Initialization
 
 let pong = new Pong();
+Controlpanel.initialize();
 pong.draw();
 pong.ui.startPrompt();
 Controlpanel.addOnChangeListeners(pong);
